@@ -12,7 +12,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
 
     const resolvedParams = use(params)
     const product = products.find(p => p.id === Number.parseInt(resolvedParams.id))
-    const [mainImage, setMainImage] = useState<string>('')
+    const [mainImage, setMainImage] = useState<number>(0)
 
     if (!product) {
         notFound()
@@ -21,13 +21,23 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
         <div className='max-auto py-4 container mb-8 px-2'>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="col-span-3 sm:col-span-1">
+
+
                     <Image
-                        src={mainImage === '' ? product.mainImage : mainImage}
+                        src={
+                            product.images && (
+
+                                product.images[mainImage] || "/placeholder.svg"
+                            )
+                        }
                         alt={product.name}
                         width={500}
                         height={400}
+                        priority
                         className='w-full object-cover rounded-lg shadow-lg'
                     />
+
+
 
                 </div>
                 <div className='col-span-3 sm:col-span-2'>
@@ -50,8 +60,8 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
                             product.images.map((img, idx) => (
                                 <Button
                                     key={idx}
-                                    onClick={() => setMainImage(img)}
-                                    className={`relative aspect-[4/3] w-24 h-20 border-2 ${img === mainImage ? "border-blue-600" : "ring-1 ring-gray-200 hover:ring-2 hover:ring-blue-400"
+                                    onClick={() => setMainImage(idx)}
+                                    className={`relative aspect-[4/3] w-24 h-20 border-2 ${idx === mainImage ? "border-blue-600" : "ring-1 ring-gray-200 hover:ring-2 hover:ring-blue-400"
                                         } rounde-md overflow-hidden`}
                                 >
                                     <Image

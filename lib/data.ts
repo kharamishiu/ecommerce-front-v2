@@ -31,6 +31,11 @@ export const products = [
         price: 39.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 3,
@@ -38,6 +43,11 @@ export const products = [
         price: 59.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 4,
@@ -45,6 +55,11 @@ export const products = [
         price: 14.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 5,
@@ -52,6 +67,11 @@ export const products = [
         price: 79.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 6,
@@ -59,6 +79,11 @@ export const products = [
         price: 24.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 7,
@@ -66,6 +91,11 @@ export const products = [
         price: 99.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
     {
         id: 8,
@@ -73,19 +103,11 @@ export const products = [
         price: 49.99,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
+        images: [
+            "https://images.unsplash.com/photo-1519852476561-ec618b0183ba?q=80&w=1456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1419133203517-f3b3ed0ba2bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://plus.unsplash.com/premium_photo-1710030733249-5d7c34509f61?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ]
     },
-    {
-        id: 9,
-        name: "Gafas de sol",
-        price: 29.99,
-        mainImage: "/placeholder.svg?height=200&width=200",
-        hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
-    },
-    {
-        id: 10,
-        name: "Cinturón",
-        price: 19.99,
-        mainImage: "/placeholder.svg?height=200&width=200",
-        hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
-    },
+
 ]
