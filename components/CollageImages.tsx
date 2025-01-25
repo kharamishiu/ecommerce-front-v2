@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+
 import Image from 'next/image'
 
 // Definimos los tipos de layouts que pueden tener nuestras imágenes

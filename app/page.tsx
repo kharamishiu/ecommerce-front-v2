@@ -2,8 +2,7 @@ import { Carrousel } from "@/components/Carrousel";
 import CollageImages from "@/components/CollageImages";
 import OurCategories from "@/components/OurCategories";
 import ProductsPage from "@/components/ProductsPage";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

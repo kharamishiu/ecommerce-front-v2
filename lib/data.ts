@@ -3,7 +3,7 @@ export interface Product {
     id: number,
     name: string,
     price: number,
-    stock: number,
+    stock?: number,
     description?: string,
     mainImage: string,
     hoverImage: string,

@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
 import { useState, use } from 'react'
 
 
-const page = ({ params }: { params: Promise<{ id: string }> }) => {
+const Page = ({ params }: { params: Promise<{ id: string }> }) => {
 
 
     const resolvedParams = use(params)
@@ -76,4 +76,4 @@ const page = ({ params }: { params: Promise<{ id: string }> }) => {
     )
 }
 
-export default page
+export default Page
