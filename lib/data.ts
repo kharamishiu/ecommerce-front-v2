@@ -29,6 +29,7 @@ export const products = [
         id: 2,
         name: "Pantalón",
         price: 39.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -41,6 +42,7 @@ export const products = [
         id: 3,
         name: "Zapatos",
         price: 59.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -53,6 +55,7 @@ export const products = [
         id: 4,
         name: "Gorra",
         price: 14.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -65,6 +68,7 @@ export const products = [
         id: 5,
         name: "Chaqueta",
         price: 79.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -77,6 +81,7 @@ export const products = [
         id: 6,
         name: "Bufanda",
         price: 24.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -89,6 +94,7 @@ export const products = [
         id: 7,
         name: "Reloj",
         price: 99.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [
@@ -101,6 +107,7 @@ export const products = [
         id: 8,
         name: "Bolso",
         price: 49.99,
+        stock: 0,
         mainImage: "/placeholder.svg?height=200&width=200",
         hoverImage: "/placeholder.svg?height=200&width=200&text=Hover",
         images: [

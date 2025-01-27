@@ -20,7 +20,7 @@ const layouts: ImageLayout[] = [
     { src: "https://images.unsplash.com/photo-1502140685919-43d9f109067b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Landscape", className: "col-span-4 md:col-span-2" },
     { src: "https://images.unsplash.com/photo-1498855926480-d98e83099315?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Technology", className: "row-span-2 md:col-span-2" },
     { src: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1441&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Abstract", className: "col-span-3 md:col-span-4" },
-    { src: "https://plus.unsplash.com/premium_photo-1673264933061-f1ea43b13032?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Travel", className: "col-span-3 md:col-span-2" },
+    { src: "https://plus.unsplash.com/premium_photo-1673264933061-f1ea43b13032?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Travel", className: "col-span-3 md:col-span-1" },
 ]
 
 

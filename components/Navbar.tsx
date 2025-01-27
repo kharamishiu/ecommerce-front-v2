@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet"
 import { Button } from './ui/button'
 import { HiUser } from "react-icons/hi";
+import { ShoppingCart } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,19 +37,28 @@ const Navbar = () => {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className='text-white focus:outline-none'
             >
-              Products
+              Categories
             </button>
             {isDropdownOpen && (
-              <div className='absolute mt-2 w-48 bg-white rounded-md shadow-lg'>
-                <Link href='/products/bear' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Bear</Link>
-                <Link href='/products/dog' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Dog</Link>
+              <div className='absolute mt-2 w-48 bg-white rounded-md shadow-lg z-10'>
+                <Link href='/categories/river' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>River</Link>
+                <Link href='/categories/lake' className='block px-4 py-2 text-gray-800 hover:bg-gray-200'>Lake</Link>
               </div>
             )}
           </div>
           <Link href='/contact' className='text-white'>Contact</Link>
+          <Link href='/'>
+            <ShoppingCart size={25} color='white' />
+          </Link>
           <Link href='/profile' className='block px-4 py-2 text-w'>
 
             <HiUser size={25} color='white' />
+
+          </Link>
+        </div>
+        <div className="md:hidden flex justify-end flex-1 mx-4">
+          <Link href='/'>
+            <ShoppingCart size={25} color='white' />
           </Link>
         </div>
         <div className='md:hidden'>

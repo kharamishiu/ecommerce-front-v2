@@ -36,7 +36,7 @@ const OurCategories = () => {
                             <Link
                                 key={idx}
                                 href={`category/${cat.nameCat}`}
-                                className='mt-4 relative w-[20rem] sm:w-[22rem] h-[350px] sm:h-[500px] mx-auto bg-no-repeat bg-cover rounded-xl group overflow-hidden'
+                                className='mt-4 relative w-[16rem] sm:w-[22rem] h-[250px] sm:h-[500px] mx-auto bg-no-repeat bg-cover rounded-xl group overflow-hidden'
                             >
                                 <Image
                                     alt='image category'
@@ -44,7 +44,7 @@ const OurCategories = () => {
                                     className='object-cover transition duration-700 ease-in-out rounded-xl group-hover:scale-125 '
                                     src={cat.nameCat !== null ? `${cat.link}` : ''}
                                 />
-                                <p className="absolute transform -rotate-45 text-4xl backdrop-blur-md  py-4 text-center w-full bottom-1/2 sm:right-10 text-white font-semibold">{cat.nameCat}</p>
+                                <p className="absolute transform -rotate-45 text-4xl backdrop-blur-md  py-4 text-center w-full bottom-1/3 sm:bottom-1/2  sm:right-10 text-white font-semibold">{cat.nameCat}</p>
                             </Link>
                         ))
                     )
