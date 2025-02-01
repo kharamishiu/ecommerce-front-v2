@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { ShoppingCart } from 'lucide-react';
 import { Button } from './ui/button';
@@ -7,7 +7,27 @@ import CartSheet from './CartSheet';
 
 const CartSidebar = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const [itemCount, setItemCount] = useState(4) // Este estado debería ser manejado globalmente en una app real
+    const [itemCount, setItemCount] = useState(0) // Este estado debería ser manejado globalmente en una app real
+
+
+    // Simular la actualización del conteo de items
+    useEffect(() => {
+        const updateItemCount = () => {
+            // Aquí deberías obtener el conteo real de items del carrito
+            // Por ahora, usaremos un valor aleatorio entre 0 y 10
+            const newCount = Math.floor(Math.random() * 6)
+            setItemCount(newCount)
+        }
+
+        // Actualizar el conteo inicialmente
+        updateItemCount()
+
+        // Configurar un intervalo para actualizar el conteo cada 30 segundos
+        const interval = setInterval(updateItemCount, 30000)
+
+        // Limpiar el intervalo cuando el componente se desmonte
+        return () => clearInterval(interval)
+    }, [])
 
     return (
 

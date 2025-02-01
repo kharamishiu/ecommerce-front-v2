@@ -26,8 +26,13 @@ const CartSheet = () => {
     }, [])
 
     const updateQuantity = (id: number, newQuantity: number) => {
+
+
+
         setCartItems((items) =>
-            items.map((item) => (item.id === id ? { ...item, quantity: Math.max(0, newQuantity) } : item)),
+            items
+                .map((item) => (item.id === id ? { ...item, quantity: Math.max(0, newQuantity) } : item))
+                .filter((item) => item.quantity > 0)//remove quantizy zero
         )
     }
 
@@ -45,7 +50,7 @@ const CartSheet = () => {
             <div className="mt-8 space-y-4">
                 {cartItems.map((item) => (
                     <div key={item.id} className="flex items-center space-x-4">
-                        <Image src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" fill />
+                        <Image src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" width={200} height={200} />
                         <div className="flex-1">
                             <h3 className="font-semibold">{item.name}</h3>
                             <p className="text-sm text-gray-500">${item.price.toFixed(2)}</p>

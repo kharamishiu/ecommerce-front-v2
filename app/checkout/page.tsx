@@ -24,12 +24,12 @@ const formSchema = z.object({
 //})
 
 // Tipo para un producto en el carrito
-type CartItem = {
+/*type CartItem = {
     id: number
     name: string
     price: number
     quantity: number
-}
+}*/
 
 const Page = () => {
     // Estado para los items del carrito (en una aplicación real, esto vendría de un estado global)
