@@ -1,5 +1,5 @@
 "use client"
-
+/*
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -21,7 +21,7 @@ const formSchema = z.object({
          .string()
          .regex(/^(0[1-9]|1[0-2])\/\d{2}$/, { message: "La fecha de expiración debe tener el formato MM/YY." }),
      cvv: z.string().regex(/^\d{3,4}$/, { message: "El CVV debe tener 3 o 4 dígitos." }),*/
-})
+//})
 
 // Tipo para un producto en el carrito
 type CartItem = {
@@ -33,40 +33,40 @@ type CartItem = {
 
 const Page = () => {
     // Estado para los items del carrito (en una aplicación real, esto vendría de un estado global)
-    const [cartItems] = useState<CartItem[]>([
-        { id: 1, name: "Camiseta", price: 19.99, quantity: 2 },
-        { id: 2, name: "Pantalón", price: 39.99, quantity: 1 },
-        { id: 3, name: "Zapatos", price: 59.99, quantity: 1 },
-    ])
-
-    // Cálculo del total
-    const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
-
-    // Configurar el formulario
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            fullName: "",
-            email: "",
-            address: "",
-            city: "",
-            postalCode: "",
-            cardNumber: "",
-            expiryDate: "",
-            cvv: "",
-        },
-    })
-
-    // Función para manejar el envío del formulario
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        // Aquí iría la lógica para procesar el pago y crear el pedido
-        console.log(values)
-        alert("Pedido realizado con éxito!")
-    }
-
+    /*    const [cartItems] = useState<CartItem[]>([
+            { id: 1, name: "Camiseta", price: 19.99, quantity: 2 },
+            { id: 2, name: "Pantalón", price: 39.99, quantity: 1 },
+            { id: 3, name: "Zapatos", price: 59.99, quantity: 1 },
+        ])
+    
+        // Cálculo del total
+        const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    
+        // Configurar el formulario
+        const form = useForm<z.infer<typeof formSchema>>({
+            resolver: zodResolver(formSchema),
+            defaultValues: {
+                fullName: "",
+                email: "",
+                address: "",
+                city: "",
+                postalCode: "",
+                cardNumber: "",
+                expiryDate: "",
+                cvv: "",
+            },
+        })
+    
+        // Función para manejar el envío del formulario
+        function onSubmit(values: z.infer<typeof formSchema>) {
+            // Aquí iría la lógica para procesar el pago y crear el pedido
+            console.log(values)
+            alert("Pedido realizado con éxito!")
+        }
+    */
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-2xl font-bold mb-6">Checkout</h1>
+            {/* <h1 className="text-2xl font-bold mb-6">Checkout</h1>
             <div className="grid md:grid-cols-2 gap-6">
                 <Card>
                     <CardHeader>
@@ -156,7 +156,7 @@ const Page = () => {
                         </div>
                     </CardContent>
                 </Card>
-            </div>
+            </div>*/}
         </div>
     )
 }
