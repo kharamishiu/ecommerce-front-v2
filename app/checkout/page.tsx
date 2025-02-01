@@ -31,7 +31,7 @@ const formSchema = z.object({
     quantity: number
 }*/
 
-const Page = () => {
+export default function Page() {
     // Estado para los items del carrito (en una aplicación real, esto vendría de un estado global)
     /*    const [cartItems] = useState<CartItem[]>([
             { id: 1, name: "Camiseta", price: 19.99, quantity: 2 },
@@ -161,4 +161,3 @@ const Page = () => {
     )
 }
 
-export default Page();

@@ -15,7 +15,7 @@ type CartItem = {
     image: string
 }
 
-const Page = () => {
+export default function Page() {
     // Estado para los items del carrito
     const [cartItems, setCartItems] = useState<CartItem[]>([
         { id: 1, name: "Camiseta", price: 19.99, quantity: 2, image: "/placeholder.svg?height=100&width=100" },
@@ -92,5 +92,5 @@ const Page = () => {
     )
 }
 
-export default Page();
+
 
