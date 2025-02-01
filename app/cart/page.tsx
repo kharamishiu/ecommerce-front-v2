@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Minus, Plus, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 
 // Tipo para un producto en el carrito
 type CartItem = {
@@ -48,9 +49,10 @@ const Page = () => {
                         <Card key={item.id} className="mb-4">
                             <CardContent className="p-4">
                                 <div className="flex items-center">
-                                    <img
+                                    <Image
                                         src={item.image || "/placeholder.svg"}
                                         alt={item.name}
+                                        fill
                                         className="w-20 h-20 object-cover rounded mr-4"
                                     />
                                     <div className="flex-grow">

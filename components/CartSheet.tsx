@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { SheetContent, SheetHeader, SheetTitle } from './ui/sheet'
 import { Button } from './ui/button'
 import { X, Plus, Minus } from "lucide-react"
-
+import Image from 'next/image'
 
 // Tipo para un producto en el carrito
 type CartItem = {
@@ -45,7 +45,7 @@ const CartSheet = () => {
             <div className="mt-8 space-y-4">
                 {cartItems.map((item) => (
                     <div key={item.id} className="flex items-center space-x-4">
-                        <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" />
+                        <Image src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" fill />
                         <div className="flex-1">
                             <h3 className="font-semibold">{item.name}</h3>
                             <p className="text-sm text-gray-500">${item.price.toFixed(2)}</p>
