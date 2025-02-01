@@ -10,6 +10,7 @@ import {
 import { Button } from './ui/button'
 import { HiUser } from "react-icons/hi";
 import { ShoppingCart } from 'lucide-react';
+import CartSidebar from './CartSidebar'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,9 +48,8 @@ const Navbar = () => {
             )}
           </div>
           <Link href='/contact' className='text-white'>Contact</Link>
-          <Link href='/'>
-            <ShoppingCart size={25} color='white' />
-          </Link>
+
+          <CartSidebar />
           <Link href='/profile' className='block px-4 py-2 text-w'>
 
             <HiUser size={25} color='white' />
@@ -60,6 +60,7 @@ const Navbar = () => {
           <Link href='/'>
             <ShoppingCart size={25} color='white' />
           </Link>
+          <CartSidebar />
         </div>
         <div className='md:hidden'>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
