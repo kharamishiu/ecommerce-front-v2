@@ -3,6 +3,7 @@ import { SheetContent, SheetHeader, SheetTitle } from './ui/sheet'
 import { Button } from './ui/button'
 import { X, Plus, Minus } from "lucide-react"
 import Image from 'next/image'
+import CheckOutModal from './CheckOutModal'
 
 // Tipo para un producto en el carrito
 type CartItem = {
@@ -15,6 +16,7 @@ type CartItem = {
 
 const CartSheet = () => {
     const [cartItems, setCartItems] = useState<CartItem[]>([])
+    const [isCheckOutOpen, setIsCheckOutOpen] = useState<boolean>(false)
 
     // Simular la carga de items del carrito
     useEffect(() => {
@@ -42,55 +44,63 @@ const CartSheet = () => {
 
     const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
+    const handleCheckout = () => {
+        setIsCheckOutOpen(true)
+    }
     return (
-        <SheetContent className="w-[350px] sm:w-[450px]">
-            <SheetHeader>
-                <SheetTitle>Tu Carrito</SheetTitle>
-            </SheetHeader>
-            <div className="mt-8 space-y-4">
-                {cartItems.map((item) => (
-                    <div key={item.id} className="flex items-center space-x-4">
-                        <Image src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" width={200} height={200} />
-                        <div className="flex-1">
-                            <h3 className="font-semibold">{item.name}</h3>
-                            <p className="text-sm text-gray-500">${item.price.toFixed(2)}</p>
-                            <div className="flex items-center mt-1">
-                                <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
-                                    <Minus className="h-4 w-4" />
-                                </Button>
-                                <span className="mx-2">{item.quantity}</span>
-                                <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
-                                    <Plus className="h-4 w-4" />
-                                </Button>
+        <>
+            <SheetContent className="w-[350px] sm:w-[450px]">
+                <SheetHeader>
+                    <SheetTitle>Tu Carrito</SheetTitle>
+                </SheetHeader>
+                <div className="mt-8 space-y-4">
+                    {cartItems.map((item) => (
+                        <div key={item.id} className="flex items-center space-x-4">
+                            <Image src={item.image || "/placeholder.svg"} alt={item.name} className="w-16 h-16 object-cover rounded" width={200} height={200} />
+                            <div className="flex-1">
+                                <h3 className="font-semibold">{item.name}</h3>
+                                <p className="text-sm text-gray-500">${item.price.toFixed(2)}</p>
+                                <div className="flex items-center mt-1">
+                                    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
+                                        <Minus className="h-4 w-4" />
+                                    </Button>
+                                    <span className="mx-2">{item.quantity}</span>
+                                    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
+                                        <Plus className="h-4 w-4" />
+                                    </Button>
+                                </div>
                             </div>
+                            <Button variant="ghost" size="icon" onClick={() => removeItem(item.id)}>
+                                <X className="h-4 w-4" />
+                            </Button>
                         </div>
-                        <Button variant="ghost" size="icon" onClick={() => removeItem(item.id)}>
-                            <X className="h-4 w-4" />
-                        </Button>
-                    </div>
-                ))}
-            </div>
-            {
-                cartItems.length > 0 ? (
-                    <div className="mt-8">
-                        <div className="flex justify-between items-center font-semibold">
-                            <span>Total:</span>
-                            <span>${total.toFixed(2)}</span>
+                    ))}
+                </div>
+                {
+                    cartItems.length > 0 ? (
+                        <div className="mt-8">
+                            <div className="flex justify-between items-center font-semibold">
+                                <span>Total:</span>
+                                <span>${total.toFixed(2)}</span>
+                            </div>
+                            <Button
+                                className="w-full mt-4"
+                                onClick={handleCheckout}
+                            >
+                                Proceder al Pago
+                            </Button>
                         </div>
-                        <Button
-                            className="w-full mt-4"
-                            onClick={() => {
-                                /* Aquí iría la lógica para ir al checkout */
-                            }}
-                        >
-                            Proceder al Pago
-                        </Button>
-                    </div>
-                ) : (
-                    <p className="text-center mt-8">Tu carrito está vacío.</p>
-                )
-            }
-        </SheetContent>
+                    ) : (
+                        <p className="text-center mt-8">Tu carrito está vacío.</p>
+                    )
+                }
+            </SheetContent>
+            <CheckOutModal
+                isOpen={isCheckOutOpen}
+                onClose={() => setIsCheckOutOpen(true)}
+                total={total}
+            />
+        </>
     )
 }
 
